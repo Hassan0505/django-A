@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+<h3>Hello user</h3>
+
+{% block content %}
+    <div class="card">
+        {% for all in alldata %}
+            <a class="card-body" href="{% url 'detail' all.id %}">{{all.title}}</a><br>
+        {% endfor %}
+    </div>    
+{% endblock %}
